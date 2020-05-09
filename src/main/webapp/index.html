@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator Service</title>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+<script>
+	function addToExpr(e){
+		var epr = document.getElementsByName("expr")[0];
+		if(isNaN(e.innerText) || isNaN(epr.value.charAt(epr.value.length-1)))
+			epr.value = epr.value+" "+e.innerText;
+		else
+			epr.value = epr.value+e.innerText;
+		
+	}
+</script>
+<script>
+	function clearExpr(){
+		var epr = document.getElementsByName("expr")[0];
+		epr.value = "";
+	}
+</script>
+<form method="post" action="calculateExpression">
+<h2> type your expression and press '=' to evaluate</h2>
+<h3> subheading</h3>
+	<input type="text" class="calculator-screen z-depth-1" name="expr" placeholder="Enter Your Expression" readonly/><br/>
+	<div class="calculator-keys">
+		<button type="button" class="btn btn-light waves-effect" name="one" onclick="addToExpr(this);">1</button>
+		<button type="button" class="btn btn-light waves-effect" name="two" onclick="addToExpr(this);">2</button>
+		<button type="button" class="btn btn-light waves-effect" name="thr" onclick="addToExpr(this);">3</button>
+		<button type="button" class="operator btn btn-info" name="add" onclick="addToExpr(this);">+</button>
+		<button type="button" class="operator btn btn-info" name="sub" onclick="addToExpr(this);">-</button><br/>
+		<button type="button" class="btn btn-light waves-effect" name="for" onclick="addToExpr(this);">4</button>
+		<button type="button" class="btn btn-light waves-effect" name="fiv" onclick="addToExpr(this);">5</button>
+		<button type="button" class="btn btn-light waves-effect" name="six" onclick="addToExpr(this);">6</button>
+		<button type="button" class="operator btn btn-info" name="mul" onclick="addToExpr(this);">x</button>
+		<button type="button" class="operator btn btn-info" name="div" onclick="addToExpr(this);">/</button><br/>
+		<button type="button" class="btn btn-light waves-effect" name="sev" onclick="addToExpr(this);">7</button>
+		<button type="button" class="btn btn-light waves-effect" name="eig" onclick="addToExpr(this);">8</button>
+		<button type="button" class="btn btn-light waves-effect" name="nin" onclick="addToExpr(this);">9</button>
+		<button type="button" class="operator btn btn-info" name="lpar" onclick="addToExpr(this);">(</button>
+		<button type="button" class="operator btn btn-info" name="rpar" onclick="addToExpr(this);">)</button><br/>
+		<button type="button" class="btn btn-light waves-effect" name="zro" onclick="addToExpr(this);">0</button>
+		<button type="button" class="operator btn btn-info" name="dot" onclick="addToExpr(this);">.</button>	
+		<button type="button" class="operator btn btn-info" name="pwr" onclick="addToExpr(this);">^</button>
+		<button type="button" class="operator btn btn-info" name="clr" onclick="clearExpr();"    >C</button>
+		<input type="submit" class="operator btn btn-info" value="=">
+	</div>
+</form>
+</body>
+</html>
