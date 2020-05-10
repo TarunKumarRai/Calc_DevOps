@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.calculator-screen {
+      width: 82%;
+      border: none;
+      background-color: #252525;
+      color: #fff;
+      text-align: right;
+      padding-right: 20px;
+      padding-left: 10px;
+      font-size: 4rem;
+    }
+
+    .calculator-keys {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 20px;
+      padding: 20px;
+    }

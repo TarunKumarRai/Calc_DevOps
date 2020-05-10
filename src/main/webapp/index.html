@@ -25,32 +25,29 @@
 		epr.value = "";
 	}
 </script>
+<h2> CALCULATOR </h2>
 <form method="post" action="calculateExpression">
-<h2> type your expression and press '=' to evaluate</h2>
-<h3> welcome to Calc</h3>
-	<input type="text" class="calculator-screen z-depth-1" name="expr" placeholder="Enter Your Expression" readonly/><br/>
-	<div class="calculator-keys">
-		<button type="button" class="btn btn-light waves-effect" name="one" onclick="addToExpr(this);">1</button>
-		<button type="button" class="btn btn-light waves-effect" name="two" onclick="addToExpr(this);">2</button>
-		<button type="button" class="btn btn-light waves-effect" name="thr" onclick="addToExpr(this);">3</button>
-		<button type="button" class="operator btn btn-info" name="add" onclick="addToExpr(this);">+</button>
-		<button type="button" class="operator btn btn-info" name="sub" onclick="addToExpr(this);">-</button><br/>
-		<button type="button" class="btn btn-light waves-effect" name="for" onclick="addToExpr(this);">4</button>
-		<button type="button" class="btn btn-light waves-effect" name="fiv" onclick="addToExpr(this);">5</button>
-		<button type="button" class="btn btn-light waves-effect" name="six" onclick="addToExpr(this);">6</button>
-		<button type="button" class="operator btn btn-info" name="mul" onclick="addToExpr(this);">x</button>
-		<button type="button" class="operator btn btn-info" name="div" onclick="addToExpr(this);">/</button><br/>
-		<button type="button" class="btn btn-light waves-effect" name="sev" onclick="addToExpr(this);">7</button>
-		<button type="button" class="btn btn-light waves-effect" name="eig" onclick="addToExpr(this);">8</button>
-		<button type="button" class="btn btn-light waves-effect" name="nin" onclick="addToExpr(this);">9</button>
-		<button type="button" class="operator btn btn-info" name="lpar" onclick="addToExpr(this);">(</button>
-		<button type="button" class="operator btn btn-info" name="rpar" onclick="addToExpr(this);">)</button><br/>
-		<button type="button" class="btn btn-light waves-effect" name="zro" onclick="addToExpr(this);">0</button>
-		<button type="button" class="operator btn btn-info" name="dot" onclick="addToExpr(this);">.</button>	
-		<button type="button" class="operator btn btn-info" name="pwr" onclick="addToExpr(this);">^</button>
-		<button type="button" class="operator btn btn-info" name="clr" onclick="clearExpr();"    >C</button>
-		<input type="submit" class="operator btn btn-info" value="=">
-	</div>
+	<input type="text" name="expr" placeholder="Enter Your Expression" readonly/><br/>
+		<button type="button" name="one" onclick="addToExpr(this);">1</button>
+		<button type="button" name="two" onclick="addToExpr(this);">2</button>
+		<button type="button" name="thr" onclick="addToExpr(this);">3</button>
+		<button type="button" name="add" onclick="addToExpr(this);">+</button>
+		<button type="button" name="sub" onclick="addToExpr(this);">-</button><br/>
+		<button type="button" name="for" onclick="addToExpr(this);">4</button>
+		<button type="button" name="fiv" onclick="addToExpr(this);">5</button>
+		<button type="button" name="six" onclick="addToExpr(this);">6</button>
+		<button type="button" name="mul" onclick="addToExpr(this);">x</button>
+		<button type="button" name="div" onclick="addToExpr(this);">/</button><br/>
+		<button type="button" name="sev" onclick="addToExpr(this);">7</button>
+		<button type="button" name="eig" onclick="addToExpr(this);">8</button>
+		<button type="button" name="nin" onclick="addToExpr(this);">9</button>
+		<button type="button" name="lpar" onclick="addToExpr(this);">(</button>
+		<button type="button" name="rpar" onclick="addToExpr(this);">)</button><br/>
+		<button type="button" name="zro" onclick="addToExpr(this);">0</button>
+		<button type="button" name="dot" onclick="addToExpr(this);">.</button>	
+		<button type="button" name="pwr" onclick="addToExpr(this);">^</button>
+		<button type="button" name="clr" onclick="clearExpr();"    >C</button>
+		<input type="submit" value="=">
 </form>
 </body>
 </html>
